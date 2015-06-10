@@ -1,5 +1,7 @@
 package br.com.ns.webapi.enderecamento.exception.handler;
 
+import br.com.ns.webapi.enderecamento.exception.RecursoNaoEncontradoException;
+
 /**
  * Exceção que indica que um CEP não pode ser encontrado. Nao checada pois o
  * tratamento nao e obrigatorio.
@@ -8,7 +10,8 @@ package br.com.ns.webapi.enderecamento.exception.handler;
  * @version 1.0, 09/06/2015
  *
  */
-public class EnderecoNaoEncontradoException extends RuntimeException {
+public class EnderecoNaoEncontradoException extends
+		RecursoNaoEncontradoException {
 
 	/**
 	 * Default serial.

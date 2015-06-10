@@ -16,6 +16,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
  * 
  * @author Erico Marineli (emarineli@gmail.com)
  * @version 1.0, 09/06/2015
+ * @since 1.0
  *
  */
 @SpringBootApplication
