@@ -46,7 +46,7 @@ public class EnderecamentoPostalRecurso {
 			@PathVariable String cep) {
 
 		if (!cep.matches(CEP_REGEX)) {
-			throw new IllegalArgumentException("CEP Inválido");
+			throw new IllegalArgumentException("CEP Invalido");
 		}
 
 		return enderecamentoPostalService

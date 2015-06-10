@@ -16,6 +16,8 @@ public class Endereco {
 	private String bairro;
 
 	private String uf;
+	
+	private String cep;
 
 	/**
 	 * Construtor de um endereço para CEPs que dispôem apenas da informação de
@@ -23,10 +25,12 @@ public class Endereco {
 	 * 
 	 * @param localidade
 	 * @param uf
+	 * @param cep
 	 */
-	public Endereco(String localidade, String uf) {
+	public Endereco(String localidade, String uf, String cep) {
 		this.localidade = localidade;
 		this.uf = uf;
+		this.cep = cep;
 	}
 
 	/**
@@ -37,13 +41,15 @@ public class Endereco {
 	 * @param localidade
 	 * @param bairro
 	 * @param uf
+	 * @param cep
 	 */
 	public Endereco(String logradouro, String localidade, String bairro,
-			String uf) {
+			String uf, String cep) {
 		this.localidade = localidade;
 		this.logradouro = logradouro;
 		this.bairro = bairro;
 		this.uf = uf;
+		this.cep = cep;
 	}
 
 	public String getLogradouro() {
@@ -60,5 +66,9 @@ public class Endereco {
 
 	public String getUf() {
 		return uf;
+	}
+	
+	public String getCep() {
+		return cep;
 	}
 }
