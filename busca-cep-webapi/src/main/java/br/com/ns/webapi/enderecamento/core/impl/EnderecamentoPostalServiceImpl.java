@@ -33,8 +33,8 @@ public class EnderecamentoPostalServiceImpl implements
 	 * Construtor padrão que irá popular o mapa com os endereços.
 	 */
 	public EnderecamentoPostalServiceImpl() {
-		enderecos.put("06250080", new Endereco("Rua João Fransico Regina",
-				"Osasco", "Jardim Elvira", "São Paulo", "06250080"));
+		enderecos.put("06250080", new Endereco("Rua Fransico Regina", "Osasco",
+				"Jardim Elvira", "São Paulo", "06250080"));
 
 		enderecos.put("14920000", new Endereco("Nova Europa", "São Paulo",
 				"14920000"));
@@ -65,9 +65,7 @@ public class EnderecamentoPostalServiceImpl implements
 	public final Endereco obterEnderecoPeloCodigoEnderecamento(String cep,
 			boolean cepExactMatch) {
 
-		cep = cep.trim();
-
-		if (!cep.matches(CEP_REGEX)) {
+		if (cep == null || !cep.trim().matches(CEP_REGEX)) {
 			throw new IllegalArgumentException("CEP Invalido");
 		}
 
