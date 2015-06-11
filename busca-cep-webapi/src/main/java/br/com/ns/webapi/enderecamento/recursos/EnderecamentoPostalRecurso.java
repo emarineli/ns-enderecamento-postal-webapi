@@ -51,7 +51,7 @@ public class EnderecamentoPostalRecurso {
 	@RequestMapping(produces = { APPLICATION_JSON_VALUE }, value = "/cep/{cep}", method = GET)
 	public final @ResponseBody Endereco obterEnderecoPeloCodigoEnderecamento(
 			@PathVariable String cep,
-			@RequestHeader(value = "cepExactMatch", defaultValue = "true") boolean cepExactMatch) {
+			@RequestHeader(value = "cepExactMatch", defaultValue = "false") boolean cepExactMatch) {
 
 		return enderecamentoPostalService
 				.obterEnderecoPeloCodigoEnderecamento(cep, cepExactMatch);
