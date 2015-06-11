@@ -1,8 +1,8 @@
 package br.com.ns.webapi.recursos.testes;
 
 
-import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.when;
+import static org.hamcrest.Matchers.is;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
@@ -84,14 +84,14 @@ public class EnderecamentoPostalRecursoTest {
 		 */
 		when(
 				enderecamentoPostalService
-						.obterEnderecoPeloCodigoEnderecamento("14920000", true))
+						.obterEnderecoPeloCodigoEnderecamento("14920000", false))
 				.thenReturn(
 						new Endereco("Nova Europa", "Sao Paulo", "14920000"));
 
 		/* Endereço completo. */
 		when(
 				enderecamentoPostalService
-						.obterEnderecoPeloCodigoEnderecamento("06250080", true))
+						.obterEnderecoPeloCodigoEnderecamento("06250080", false))
 				.thenReturn(
 						new Endereco("Rua Fransico Regina", "Osasco",
 								"Jardim Elvira", "Sao Paulo", "06250080"));
@@ -100,17 +100,17 @@ public class EnderecamentoPostalRecursoTest {
 
 		when(
 				enderecamentoPostalService
-						.obterEnderecoPeloCodigoEnderecamento("149", true))
+						.obterEnderecoPeloCodigoEnderecamento("149", false))
 				.thenThrow(new IllegalArgumentException("CEP invalido"));
 
 		when(
 				enderecamentoPostalService
-						.obterEnderecoPeloCodigoEnderecamento("14920A00", true))
+						.obterEnderecoPeloCodigoEnderecamento("14920A00", false))
 				.thenThrow(new IllegalArgumentException("CEP invalido"));
 
 		when(
 				enderecamentoPostalService
-						.obterEnderecoPeloCodigoEnderecamento("14900000", true))
+						.obterEnderecoPeloCodigoEnderecamento("14900000", false))
 				.thenThrow(
 						new RecursoNaoEncontradoException(
 								"CEP nao disponivel no repositorio"));
@@ -118,7 +118,7 @@ public class EnderecamentoPostalRecursoTest {
 		/* Erro irrecuperável e unchecked */
 		when(
 				enderecamentoPostalService
-						.obterEnderecoPeloCodigoEnderecamento("15920000", true))
+						.obterEnderecoPeloCodigoEnderecamento("15920000", false))
 				.thenThrow(
 						new NullPointerException(
 								"Erro qualquer de runtime"));
