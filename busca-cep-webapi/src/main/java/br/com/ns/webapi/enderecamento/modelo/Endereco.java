@@ -1,5 +1,7 @@
 package br.com.ns.webapi.enderecamento.modelo;
 
+import java.io.Serializable;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
@@ -11,7 +13,12 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
  *
  */
 @JsonInclude(Include.NON_NULL)
-public class Endereco {
+public class Endereco implements Serializable {
+
+	/**
+	 * Serial default.
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private String logradouro;
 
@@ -20,7 +27,7 @@ public class Endereco {
 	private String bairro;
 
 	private String uf;
-	
+
 	private String cep;
 
 	/**
@@ -71,7 +78,7 @@ public class Endereco {
 	public String getUf() {
 		return uf;
 	}
-	
+
 	public String getCep() {
 		return cep;
 	}
@@ -127,5 +134,4 @@ public class Endereco {
 		return true;
 	}
 
-	
 }
