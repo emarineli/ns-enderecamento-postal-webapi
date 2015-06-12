@@ -6,15 +6,11 @@ URI do recurso: http://[host]:[port]/enderecamento/cep/{cep}
 
 h2. Testes
 
-bc.. 
-
 p. https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/06250080
 https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/14920000
 https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/14920100
 
 h2. URLs de acesso a Métricas
 
-bc.. 
-
 p. Hystrix Dashboard -> https://mysterious-savannah-8823.herokuapp.com/hystrix/monitor?stream=https://mysterious-savannah-8823.herokuapp.com/hystrix.stream
-p. Métricas Actuator -> https://mysterious-savannah-8823.herokuapp.com/metrics
+Métricas Actuator -> https://mysterious-savannah-8823.herokuapp.com/metrics
