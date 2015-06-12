@@ -1,9 +1,16 @@
-[URLs de acesso a Métricas]
+h1. Exercício #1
 
-[local]
-Hystrix Dashboard -> http://localhost:9000/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A9000%2Fhystrix.stream
-Métricas Actuator -> http://localhost:9001/metrics
+p. Serviço para consulta de endereços baseados no código de endereçamento postal.
 
-[Heroku]
+URI do recurso: http://<host>:<port>/enderecamento/cep/{cep}
+
+h2. Testes
+bc.. 
+https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/06250080
+https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/14920000
+https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/14920100
+
+h2. URLs de acesso a Métricas
+bc.. 
 Hystrix Dashboard -> https://mysterious-savannah-8823.herokuapp.com/hystrix/monitor?stream=https://mysterious-savannah-8823.herokuapp.com/hystrix.stream
 Métricas Actuator -> https://mysterious-savannah-8823.herokuapp.com/metrics
