@@ -2,15 +2,19 @@ h1. Exercício #1
 
 p. Serviço para consulta de endereços baseados no código de endereçamento postal.
 
-URI do recurso: http://<host>:<port>/enderecamento/cep/{cep}
+URI do recurso: http://[host]:[port]/enderecamento/cep/{cep}
 
 h2. Testes
+
 bc.. 
-https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/06250080
+
+p. https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/06250080
 https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/14920000
 https://mysterious-savannah-8823.herokuapp.com/enderecamento/cep/14920100
 
 h2. URLs de acesso a Métricas
+
 bc.. 
-Hystrix Dashboard -> https://mysterious-savannah-8823.herokuapp.com/hystrix/monitor?stream=https://mysterious-savannah-8823.herokuapp.com/hystrix.stream
-Métricas Actuator -> https://mysterious-savannah-8823.herokuapp.com/metrics
+
+p. Hystrix Dashboard -> https://mysterious-savannah-8823.herokuapp.com/hystrix/monitor?stream=https://mysterious-savannah-8823.herokuapp.com/hystrix.stream
+p. Métricas Actuator -> https://mysterious-savannah-8823.herokuapp.com/metrics
